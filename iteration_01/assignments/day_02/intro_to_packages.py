@@ -55,6 +55,13 @@ import cmath
 # ---------------------------------------------------
 
 # TODO: Ask for a number, convert it to int, double it, and print
+def number():
+    x=input("Enter a number: ")
+    x=int(x)
+    x=2*x
+    print(x)
+
+number()
 
 
 # ---------------------------------------------------
