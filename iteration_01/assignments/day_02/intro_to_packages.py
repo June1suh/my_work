@@ -22,7 +22,8 @@ with help(), and fill in the TODOs. Test your code after each level.
 
 import random
 # TODO: Generate and print 3 random integers between 1 and 10
-
+for i in range(3):
+    print(random.randint(1,10))
 
 # ---------------------------------------------------
 # Level 2 – Complex Numbers with cmath
@@ -34,7 +35,8 @@ import random
 
 import cmath
 # TODO: Print the square root of -1 using cmath
-
+result=cmath.sqrt(-1)
+print("Square root of -1 is"+str(result))
 
 # ---------------------------------------------------
 # Level 3 – User Input Basics
@@ -42,7 +44,8 @@ import cmath
 # 1. Ask the user to type their name
 # 2. Print a welcome message
 # ---------------------------------------------------
-
+name=input("Enter your name: ")
+print("Welcome "+str(name)+"!")
 # TODO: Ask for the user’s name and print a greeting
 
 
@@ -54,7 +57,15 @@ import cmath
 # 3. Multiply it by 2 and print the result
 # ---------------------------------------------------
 
+
 # TODO: Ask for a number, convert it to int, double it, and print
+def number():
+    x=input("Enter a number: ")
+    x=int(x)
+    x=2*x
+    print(x)
+
+number()
 
 
 # ---------------------------------------------------
@@ -65,9 +76,12 @@ import cmath
 # 3. Construct a complex number and print it
 # ---------------------------------------------------
 
+
 # TODO: Generate a random complex number with integer real and imaginary parts
-
-
+real_=random.randint(-10,10)
+imaginary_=random.randint(-10,10)
+z=complex(real_,imaginary_)
+print("Random number: "+str(z))
 # ---------------------------------------------------
 # Level 6 – Complex Number Guesser Game
 # Rules:
@@ -85,6 +99,27 @@ target = complex(target_real, target_imag)
 
 print("Welcome to the Complex Number Guesser Game!")
 print("I have chosen a complex number with real and imaginary parts between -5 and 5.")
+while True:
+    real=int(input("Guess for the real part: "))
+    imagine=int(input("Guess for the imaginary part: "))
+    if real<target_real:
+        print("Real is too low")
+    elif real>target_real:
+        print("Real is too high")
+    else:
+        print("Real is correct")
+    
+    if imagine<target_imag:
+        print("imaginary too low")
+    elif imagine>target_imag:
+        print("imaginary too high")
+    else:
+        print("imaginary is correct")
+    
+    if real==target_real and imagine==target_imag:
+        print(f"Congratulations the answer was {target}")
+        break
+
 
 # TODO: Write a loop where the user keeps guessing until correct
 # Hints:
