@@ -1,0 +1,53 @@
+class Rectangle:
+    """
+    A rectangle shape defined by width and height.
+
+    Attributes:
+        width (int): how wide the rectangle is
+        height (int): how tall the rectangle is
+    """
+
+    def __init__(self, width: int, height: int):
+        self.width = width
+        self.height = height
+
+    def area(self) -> int:
+        """
+        Compute the area of this rectangle.
+
+        Returns:
+            int: the area (width * height)
+        """
+        return self.width * self.height
+
+    def describe(self) -> None:
+        """
+        Print a description of the rectangle.
+
+        Returns:
+            None
+        """
+        print(f"Rectangle {self.width} by {self.height} has area {self.area()}")
+
+
+class Circle:
+    def __init__(self, radius: float):
+        self.radius = radius
+
+    def area(self) -> float:
+        import math
+        return math.pi * (self.radius ** 2)
+
+    def describe(self) -> None:
+        print(f"Circle with radius {self.radius} has area {self.area()}")
+
+class Triangle:
+    def __init__(self, base: float, height: float):
+        self.base = base
+        self.height = height
+
+    def area(self) -> float:
+        return 0.5 * self.base * self.height
+
+    def describe(self) -> None:
+        print(f"Triangle with base {self.base} and height {self.height} has area {self.area()}")

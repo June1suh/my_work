@@ -53,7 +53,7 @@ print(f"The last food is {foods[-1]}")
 
 # Bug Exploration:
 # Change your loop to go past the length of the list:
-for i in range(______):
+for i in range(5):
     print(f"Index {i} → {foods[i]}")
 # Q: Why does this cause an error?
 
