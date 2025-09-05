@@ -87,3 +87,4 @@ with open("favorite_quotes.txt", "w")
 ### Tips and Hints
 * Always use `.strip()` to remove `\n` from lines. (new line markers)
 * Test your functions independently.
+
